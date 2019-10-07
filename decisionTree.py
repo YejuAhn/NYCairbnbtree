@@ -291,24 +291,19 @@ if __name__ == '__main__':
     test_error = tally / test_total
     test_error = round(test_error, 4)
     test_errors.append(test_error)
-    #
-    # print(depths)
-    # print(train_errors)
-    # print(test_errors)
-    # fig = plt.figure()
-    # plt.errorbar(depths, train_errors, label='Train Error')
-    # plt.errorbar(depths, test_errors, label='Test Error')
-    # plt.legend(loc='lower right')
-    # plt.show()
+    
+    print(depths)
+    print(train_errors)
+    print(test_errors)
+    fig = plt.figure()
+    plt.errorbar(depths, train_errors, label='Train Error')
+    plt.errorbar(depths, test_errors, label='Test Error')
+    plt.legend(loc='lower right')
+    plt.show()
 
-    #
-    #
-    #
-    #
+ 
 
-    #train_error
-
-    # train_error = get_training_error(learned_tree, target_attr, len(train_rows))
+    train_error = get_training_error(learned_tree, target_attr, len(train_rows))
 
     # metrics
     metrics_out_file = open(metrics_out, 'w')
